@@ -1,4 +1,4 @@
-# WordPress Starter Theme
+# WordPress Boilerplate Theme
 A modular wordpress theme for building custom templates.
 
 ## Instructions
