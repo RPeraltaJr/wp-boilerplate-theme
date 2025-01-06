@@ -7,7 +7,7 @@ A modular wordpress theme for building custom templates.
 	- [git](http://git-scm.com/)
 	- [gulp](http://gulpjs.com/)
 2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC):  
-	`git clone https://github.com/RPeraltaJr/wp-starter-theme`
+	`git clone https://github.com/RPeraltaJr/wp-boilerplate-theme`
 3. Change directory to project folder:  
 	`cd wp-starter-theme`
 4. Install all dependencies:  
