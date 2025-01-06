@@ -1,5 +1,8 @@
 <?php
 
+// * limit login attempts
+include 'functions/limit-login-attempts.php';
+
 // * wp admin logo
 // include 'functions/wp-admin-logo.php';
 
