@@ -1,19 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,300i,400,600,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css");
+.text-blue-1 {
+  color: #024dbd;
+}
+
+.bg-blue-1 {
+  background-color: #024dbd;
+}
+
+.text-green-1 {
+  color: #007934;
+}
+
+.bg-green-1 {
+  background-color: #007934;
+}
+
+.text-grey-1 {
+  color: #808285;
+}
+
+.bg-grey-1 {
+  background-color: #808285;
+}
+
+.text-grey-2 {
+  color: #1d2326;
+}
+
+.bg-grey-2 {
+  background-color: #1d2326;
+}
+
+.text-yellow-1 {
+  color: #F8C84E;
+}
+
+.bg-yellow-1 {
+  background-color: #F8C84E;
+}
+
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
-
 @media (max-width: 1299px) {
   .container {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
-
 @media (max-width: 991px) {
   .container {
     padding-left: 3rem;
@@ -29,55 +68,335 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans Condensed", sans-serif;
 }
 
-.font-display-1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 3.5rem;
-  line-height: 1.3;
-  font-weight: 300;
+.text-h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 8rem;
+  font-weight: 400;
+  line-height: 1;
 }
-
 @media (max-width: 991px) {
-  .font-display-1 {
+  .text-h1 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 767px) {
+  .text-h1 {
+    font-size: 4.8rem;
+  }
+}
+@media (max-width: 599px) {
+  .text-h1 {
+    font-size: 4rem;
+  }
+}
+.text-h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 9rem;
+  font-weight: 100;
+  line-height: 0.9;
+}
+@media (max-width: 991px) {
+  .text-h2 {
+    font-size: 6rem;
+  }
+}
+.text-h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 300;
+  line-height: 1;
+}
+@media (max-width: 991px) {
+  .text-h3 {
     font-size: 2.8rem;
   }
 }
-
-@media (max-width: 767px) {
-  .font-display-1 {
-    font-size: 2.2rem;
-  }
-}
-
-.font-display-1 + .body-copy {
+.text-h3 + .text-body {
   margin-top: 2rem;
 }
-
-.body-copy,
-.body-copy > p {
+.text-h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+@media (max-width: 991px) {
+  .text-h4 {
+    font-size: 1.8rem;
+  }
+}
+.text-h5 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.2rem;
   font-weight: 300;
-  line-height: 1.45;
+  line-height: 1;
+  letter-spacing: 2.3px;
+}
+@media (max-width: 991px) {
+  .text-h5 {
+    font-size: 1.8rem;
+  }
+}
+.text-h6 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+@media (max-width: 991px) {
+  .text-h6 {
+    font-size: 1.2rem;
+  }
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
+.text-body,
+.text-body > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
 @media (max-width: 767px) {
-  .body-copy,
-  .body-copy > p {
+  .text-body,
+  .text-body > p {
     font-size: 1.5rem;
   }
 }
-
-.body-copy + .body-copy,
-.body-copy + p,
-.body-copy > p + .body-copy,
-.body-copy > p + p {
+.text-body + .text-body, .text-body + p,
+.text-body > p + .text-body,
+.text-body > p + p {
   margin-top: 1rem;
 }
 
-a {
-  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+.uppercase {
+  text-transform: uppercase;
 }
 
+.transition {
+  transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Bootstrap Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #808285;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 9999px;
+  box-shadow: none;
+  outline: none;
+  transition: all 0.4s ease;
+}
+.form-control:focus {
+  border: solid 1px #024dbd;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+}
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  display: none !important;
+}
+
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+  table.visible-xs {
+    display: table !important;
+  }
+  tr.visible-xs {
+    display: table-row !important;
+  }
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  .visible-xs-block {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .visible-xs-inline {
+    display: inline !important;
+  }
+}
+@media (max-width: 767px) {
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+  table.visible-sm {
+    display: table !important;
+  }
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-block {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+  table.visible-md {
+    display: table !important;
+  }
+  tr.visible-md {
+    display: table-row !important;
+  }
+  th.visible-md,
+  td.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
+  }
+  table.visible-lg {
+    display: table !important;
+  }
+  tr.visible-lg {
+    display: table-row !important;
+  }
+  th.visible-lg,
+  td.visible-lg {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg-block {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
 *,
 html,
 body {
@@ -87,6 +406,7 @@ body {
 html {
   line-height: 1.5;
   font-size: 10px;
+  margin-top: 0 !important;
 }
 
 html,
@@ -107,6 +427,15 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   color: inherit;
 }
 
+body.logged-in {
+  padding-top: 32px;
+}
+@media (max-width: 767px) {
+  body.logged-in {
+    padding-top: 46px;
+  }
+}
+
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: inherit;
   font-size: 60%;
@@ -118,7 +447,6 @@ a {
   text-decoration: none;
   outline: none;
 }
-
 a:hover, a:focus, a:active {
   color: inherit;
   cursor: pointer;
@@ -126,10 +454,10 @@ a:hover, a:focus, a:active {
 
 ::-moz-selection {
   color: white;
-  background: #FFD4CA;
+  background: black;
 }
 
 ::selection {
   color: white;
-  background: #FFD4CA;
+  background: black;
 }

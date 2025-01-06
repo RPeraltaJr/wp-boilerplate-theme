@@ -1,19 +1,20 @@
 // * core components
-@import 'colors';
-@import 'mixins';
-@import 'layout';
-@import 'fonts';
-@import 'buttons';
-@import 'animation';
-// @import 'lightbox';
-@import 'bootstrap';
-@import 'base';
+@use 'colors';
+// @use 'mixins';
+@use 'layout';
+@use 'fonts';
+@use 'buttons';
+@use 'animation';
+// @use 'lightbox';
+@use 'bootstrap';
+@use 'base';
 
 // * include global components
-@import '../../../components/global/**/*.scss';
+@use '../../../components/global/navbar/navbar';
+@use '../../../components/global/footer/footer';
 
 // * include shared / snippet components
-// @import '../../../components/shared/example/*.scss';
+// @use '../../../components/shared/example/*.scss';
 
 // * page specific components
-@import '../../../components/home/**/*.scss';
+@use '../../../components/home/hero/hero';

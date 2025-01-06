@@ -1,3 +1,4 @@
+@use '../scss/colors';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css');
 
 /* Bootstrap Classes */
@@ -20,16 +21,16 @@
 	padding: 6px 12px;
 	font-size: 15px;
 	line-height: 1.42857143;
-	color: $color-grey-1;
+	color: colors.$grey-1;
 	background-color: #fff;
 	background-image: none;
-	border: 1px solid darken($color-grey-2, 10%);
+	// border: 1px solid mix(black, $color-grey-2, 10%);
 	border-radius: 9999px;
 	box-shadow: none;
 	outline: none;
   transition: all 0.4s ease;
 	&:focus {
-		border: solid 1px $color-blue-1;
+		border: solid 1px colors.$blue-1;
 	}
 }
 

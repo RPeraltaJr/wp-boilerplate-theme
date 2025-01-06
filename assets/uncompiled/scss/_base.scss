@@ -1,3 +1,5 @@
+@use '../scss/fonts';
+
 *,
 html,
 body {
@@ -11,8 +13,8 @@ html {
 }
 
 html,
-body {
-    font-family: $primary-font;
+body {  
+    font-family: fonts.$primary;
 }
 
 * {

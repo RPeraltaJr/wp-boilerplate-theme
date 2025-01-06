@@ -1,23 +1,15 @@
-/*
-* ------------------------------------------------------------------------------
-* Gulpfile.js
-* https://gulpjs.com/
-* ------------------------------------------------------------------------------
-*/
-
-const gulp = require('gulp');
-// const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const sass = require('gulp-dart-sass');
-const rename = require('gulp-rename');
-const sassGlob = require('gulp-sass-glob');
-const browserify = require('browserify');
-const babelify = require('babelify');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const es = require('event-stream');
+// Import necessary modules
+import gulp from 'gulp';
+import uglify from 'gulp-uglify';
+import autoprefixer from 'gulp-autoprefixer';
+import cleanCSS from 'gulp-clean-css';
+import sass from 'gulp-dart-sass';
+import rename from 'gulp-rename';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import source from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
+import es from 'event-stream';
 
 const paths = {
   styles: {
@@ -30,7 +22,6 @@ const paths = {
   scripts: {
     inputs: [
       './assets/uncompiled/js/page-home.js',
-      './assets/uncompiled/js/page-submissions.js',
     ],
     modules: 'assets/uncompiled/js/modules/*.js',
     dest: 'assets/build/js/',
@@ -45,7 +36,6 @@ const sassOptions = {
 function styles() {
   return gulp
     .src(paths.styles.scssInput)
-    .pipe(sassGlob())
     .pipe(sass(sassOptions)).on('error', sass.logError)
     .pipe(autoprefixer({
       grid: true,
@@ -57,7 +47,7 @@ function styles() {
     }))
     .pipe(gulp.dest(paths.styles.cssDestMin));
 }
-exports.styles = styles;
+export { styles };
 
 // * Compresses Scripts
 async function scripts() {
@@ -73,9 +63,7 @@ async function scripts() {
       .bundle()
       .pipe(source(entry))
       .pipe(buffer())
-      // .pipe(sourcemaps.init())
       .pipe(uglify())
-      // .pipe(sourcemaps.write('./'))
       .pipe(rename({
         dirname: '',
         extname: '.min.js',
@@ -86,7 +74,7 @@ async function scripts() {
 
   return es.merge.apply(null, tasks);
 }
-exports.scripts = scripts;
+export { scripts };
 
 // * Watch Task
 function watch() {
@@ -103,7 +91,7 @@ function watch() {
     console.log(`File ${path} was ${event}, running tasks...`);
   });
 }
-exports.watch = watch;
+export { watch };
 
 const build = gulp.parallel(styles, scripts, watch);
 gulp.task('default', build);

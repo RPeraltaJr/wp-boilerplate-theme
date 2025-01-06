@@ -1,13 +1,16 @@
 // * colors
-$color-grey: #808285;
-$color-grey-light: #F6F6F6;
-$color-yellow: #F8C84E;
-$color-green: #007934;
+$blue-1: #024dbd;
+$green-1: #007934;
+$grey-1: #808285;
+$grey-2: #1d2326;
+$yellow-1: #F8C84E;
 
 $color-map: (
-    grey: $color-grey,
-    yellow: $color-yellow,
-    green: $color-green,
+    blue-1: $blue-1,
+    green-1: $green-1,
+    grey-1: $grey-1,
+    grey-2: $grey-2,
+    yellow-1: $yellow-1,
 );
 
 @each $name, $color in $color-map {
@@ -15,6 +18,6 @@ $color-map: (
         color: $color;
     }
     .bg-#{"" + $name} {
-        background-color: $color;
+        background-color: $color; 
     }
 }
