@@ -6,6 +6,7 @@ Template Name: Home
 $page_setting = (object) [
     "type"      => "page-home",
     "name"      => str_replace('.php', '', basename($_SERVER['PHP_SELF'])),
+    "main"      => "#hero", // for 'skip to main content'
     "meta"      => (object) [
         "title" => "Home",
         "desc"  => "",
